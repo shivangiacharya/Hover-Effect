@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade in a box</title>
+    <style>
+        .container{
+            position: relative;
+            width: 50%;
+        }
+        .image{
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            backface-visibility: hidden;
+            transition: 0.5s;
+        }
+        .middle{
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: 0.5s ease;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .container:hover .image{
+            opacity: 0.3;
+        }
+        .container:hover .middle{
+            opacity: 1;
+        }
+        .text{
+            background-color: blueviolet;
+            color: burlywood;
+            font-size: 15px;
+            padding: 16px 32px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h2>Image Hover</h2>
+    <h4>Fade In A Box</h4>
+    
+    <div class="container">
+        <img src="https://www.thespruce.com/thmb/c3znkzZgMeuvzBy4wH13jVllfUo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/plants-with-big-flowers-4138211-hero-b10becb169064cc4b3c7967adc1b22e1.jpg" class="image" alt="Flower">
+    <div class="middle">
+        <div class="text">Flower</div>
+    </div>
+    
+    </div>
+</body>
+</html>
